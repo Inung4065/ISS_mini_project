@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="useDB">
 	<!-- ACC_TBL -->
-	<select id="selectAccAll" resultType="AccVo">
+	<select id="selectAccAll" resultType="AccDto">
 		SELECT * FROM ACC_TBL;
 	</select>
-	<select id="selectAccForAccountId" resultType="AccVo">
+	<select id="selectAccForAccountId" resultType="AccDto">
 		SELECT * FROM ACC_TBL WHERE accountId=#{value};
 	</select>
-	<insert id="insertAcc" parameterType="AccVo">
+	<insert id="insertAcc" parameterType="AccDto">
 		insert into ACC_TBL values(${accountId}, #{accountPassword}, ${accountMail})
 	</insert>
 </mapper>
