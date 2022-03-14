@@ -4,6 +4,6 @@
 
 <configuration> 
 	<typeAliases>
-		<typeAlias alias="AccVo" type="com.spring.vo.AccVo" />
+		<typeAlias alias="AccDto" type="com.spring.Dto.AccDto" />
 	</typeAliases>
 </configuration>

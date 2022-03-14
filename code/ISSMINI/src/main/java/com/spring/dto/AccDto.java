@@ -1,6 +1,6 @@
-package com.spring.vo;
+package com.spring.dto;
 
-public class AccVo {
+public class AccDto {
 	private String accountId;
 	private String accountPassword;
 	private String accountMail;
