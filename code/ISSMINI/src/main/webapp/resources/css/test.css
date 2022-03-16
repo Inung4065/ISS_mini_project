@@ -1,0 +1,35 @@
+@charset "utf-8";
+html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin : 0;
+        overflow-y:hidden;
+        overflow-x:hidden;
+      }
+      p {
+       font-family:"Bauhaus 93";
+       font-size: xx-large;
+      }
+      .registadd{
+		padding: 10px; 
+		height: 50px; 
+		width: 30%;  
+		margin:0 auto;
+		margin-top:10px; 
+		overflow: auto;
+		display:block;
+		padding:.375rem .75rem;
+		font-size:1rem;
+		font-weight:400;
+		line-height:1.5;
+		color:#212529;
+		background-color:#fff;
+		background-clip:padding-box;
+		border:1px solid #ced4da;
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		appearance:none;
+		border-radius:.25rem;
+		transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out
+	   }
