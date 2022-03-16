@@ -22,9 +22,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class SignUpController {
 
-	@RequestMapping(value="signUp")
+	@RequestMapping(value="i0002")
 	public String viewPage() {
-		return "signUp";
+		return "i0002";
 	}
 	
 	

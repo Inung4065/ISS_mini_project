@@ -27,7 +27,7 @@
 					<input class="form-control m-1" type="text" placeholder="ID">
 					<input class="form-control m-1" type="password" placeholder="PASSWORD">
 					<button class="btn btn-outline-light m-1" type="submit">Sign in</button>
-					<button class="btn btn-outline-light m-1" type="button" onclick="location.href=''">Sign up</button>
+					<button class="btn btn-outline-light m-1" type="button" onclick="location.href='/issmini/i0002'">Sign up</button>
 				</form>
 			</div>
 			<div class="col-4">
