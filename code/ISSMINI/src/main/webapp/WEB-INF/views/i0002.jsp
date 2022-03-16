@@ -15,18 +15,15 @@
 <body>
 <div class="container-fluid p-3 mb-2 bg-dark text-white" style=" padding: 10px; height: 100%; width: 100%; margin : 0; overflow: hidden; ">
   <div class="row" style=" padding: 10px; height: 20%; width: 100%; min-height: 50px; margin : 0;  overflow: hidden;">
-    <div class="col">
-    </div>
-    <div class="col fw-bold">
-      <p>ISS</p>
-    </div>
-    <div class="col">
-    </div>
-    <div class="col fw-bold" align="right">
-      <p>signUp page</p>
-    </div>
-    <div class="col">
-    </div>
+    <div class="row">
+			<div class="p-3" align="left">
+				<p>ISS</p>
+				<hr>
+			</div>
+		</div>
+		<div class="row pr-1" align="center">
+			<p>signUp</p>
+		</div>
   </div>
   <div class="row" style="padding: 10px; height: 60%; width: 100%; min-height: 300px; margin : 0;  overflow: hidden;">
     <div class="col fst-italic" style="margin-top: 15%; transform: translateY(-50%);text-align: center;">
@@ -40,6 +37,7 @@
   </div>
   <div class="row"style=" padding: 10px; height: 20%; width: 100%; min-height: 50px; margin : 0;  overflow: hidden;">
     <div class="col" align="center">
+    <hr>
       <p>ISS Management</p>
     </div>
   </div>
