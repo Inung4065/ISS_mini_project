@@ -44,7 +44,7 @@
   </div>
   <div class="row"style=" padding: 10px; height: 20%; width: 100%; min-height: 50px; margin : 0;  overflow: hidden;">
     <div class="col" align="center">
-      <p>ISS Document Management</p>
+      <p>ISS Management</p>
     </div>
   </div>
 </div>
