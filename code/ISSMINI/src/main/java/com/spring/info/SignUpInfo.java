@@ -1,6 +1,6 @@
 package com.spring.info;
 
-public class SingUpInfo {
+public class SignUpInfo {
 	private String id;
 	private String password;
 	private String passwordRe;
