@@ -3,7 +3,7 @@ package com.spring.dto;
 public class AccDto {
 	private String accountId;
 	private String accountPassword;
-	private String accountMail;
+	private String accountName;
 	
 	public String getAccountId() {
 		return accountId;
@@ -17,10 +17,10 @@ public class AccDto {
 	public void setAccountPassword(String accountPassword) {
 		this.accountPassword = accountPassword;
 	}
-	public String getAccountMail() {
-		return accountMail;
+	public String getAccountName() {
+		return accountName;
 	}
-	public void setAccountMail(String accountMail) {
-		this.accountMail = accountMail;
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
 	}
 }

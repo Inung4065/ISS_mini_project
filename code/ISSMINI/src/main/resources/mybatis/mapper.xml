@@ -12,6 +12,6 @@
 		SELECT * FROM ACC_TBL WHERE accountId=#{accountId} AND accountPassword=#{accountPassword};
 	</select>
 	<insert id="insertAcc" parameterType="AccDto">
-		insert into ACC_TBL values(#{accountId}, #{accountPassword}, #{accountMail})
+		INSERT INTO ACC_TBL VALUES(#{accountId}, #{accountPassword}, #{accountName})
 	</insert>
 </mapper>
