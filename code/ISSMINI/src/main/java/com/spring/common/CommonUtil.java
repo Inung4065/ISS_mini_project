@@ -4,6 +4,9 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class CommonUtil {
 
 	public void alert(HttpServletResponse response, String msg) throws Exception {
