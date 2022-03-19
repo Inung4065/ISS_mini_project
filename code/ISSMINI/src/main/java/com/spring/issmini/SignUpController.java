@@ -24,7 +24,7 @@ import com.spring.info.SingUpInfo;
  */
 @Controller
 public class SignUpController {
-	
+
 	@Inject
 	private SqlSessionTemplate session;
 	@Autowired
