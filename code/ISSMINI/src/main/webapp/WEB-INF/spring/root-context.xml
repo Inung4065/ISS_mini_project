@@ -31,4 +31,18 @@
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
 	</bean>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>classpath:/messages/message</value>
+			</list>
+		</property>
+		<property name="defaultEncoding" value="UTF-16" />
+		<property name="cacheSeconds" value="60" />
+	</bean>
+	
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="ja"></property>
+	</bean>
 </beans>
