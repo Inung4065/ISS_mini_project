@@ -37,7 +37,7 @@ public class SignInController {
 
 		} else {
 
-			String errorMsg = "아이디 혹은 비밀번호가 일치하지 않습니다.";
+			String errorMsg = "情報不一致です。";
 			session.setAttribute( "errorMsg", errorMsg );
 
 			return "i0001";
