@@ -37,8 +37,8 @@
 									<tr>
 										<th scope="row">${list.no}</th>
 										<td>${list.title}</td>
-										<td>${list.contents}</td>
 										<td>${list.user}</td>
+										<td>${list.createTime}</td>
 									</tr>
 								</c:forEach>
 							</tbody>
