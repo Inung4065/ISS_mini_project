@@ -11,4 +11,7 @@
 	<insert id="insertAcc" parameterType="AccDto">
 		INSERT INTO ACC_TBL VALUES(#{accountId}, #{accountPassword}, #{accountName})
 	</insert>
+	<select id="selectAllBoard" resultType="BoaDto">
+		SELECT * FROM BOA_TBL order by no;
+	</select>
 </mapper>

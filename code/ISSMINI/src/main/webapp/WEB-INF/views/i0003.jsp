@@ -26,12 +26,12 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${list}" var="list">
+						<c:forEach items="${boardlist}" var="list">
 							<tr>
-								<th scope="row">${list.num}</th>
-								<td>${list.subject}</td>
-								<td>${list.name}</td>
-								<td>${list.date}</td>
+								<th scope="row">${list.no}</th>
+								<td>${list.title}</td>
+								<td>${list.contents}</td>
+								<td>${list.user}</td>
 							</tr>
 						</c:forEach>
 					</tbody>

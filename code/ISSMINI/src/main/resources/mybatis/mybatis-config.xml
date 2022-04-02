@@ -5,5 +5,6 @@
 <configuration> 
 	<typeAliases>
 		<typeAlias alias="AccDto" type="com.spring.dto.AccDto" />
+		<typeAlias alias="BoaDto" type="com.spring.dto.BoaDto" />
 	</typeAliases>
 </configuration>
