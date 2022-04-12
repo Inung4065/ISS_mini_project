@@ -54,9 +54,9 @@ public class SignInController {
 			List<BoaDto> list = boardDao.selectAllBoard(boadto);
 			model.addAttribute("boardlist",list);
 			
-			return "i0003";
+			model.addAttribute("headerFlag", "board");
 			
-
+			return "i0003";
 		} else {
 
 			String msg = messageSource.getMessage("IME0005", null, Locale.JAPANESE);
