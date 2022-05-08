@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.common.CommonUtil;
-import com.spring.dao.BoardDao;
 import com.spring.dto.AccDto;
 import com.spring.dto.BoaDto;
 import com.spring.service.BoardService;
@@ -32,8 +31,6 @@ public class SignInController {
 	private SignInService signInService;
 	@Autowired
 	private BoardService boardService;
-	@Autowired
-	private BoardDao boardDao;
 	@Autowired
 	private MessageSource messageSource;
 	@Autowired
@@ -51,7 +48,7 @@ public class SignInController {
 
 			session.setAttribute( "outAccDto", outAccDto );
 			
-			List<BoaDto> list = boardDao.selectAllBoard(boadto);
+			List<BoaDto> list = boardService.boardAll();
 			model.addAttribute("boardlist",list);
 			
 			model.addAttribute("headerFlag", "board");

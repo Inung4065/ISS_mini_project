@@ -18,8 +18,7 @@ public class HeaderController {
 	
 	@RequestMapping(value="/board", method=RequestMethod.POST )
 	public String HeaderBoard(Model model) throws Exception {
-		BoaDto boa = new BoaDto();
-		List<BoaDto> list = boardService.boardAll(boa);
+		List<BoaDto> list = boardService.boardAll();
 		model.addAttribute("boardlist",list);
 		model.addAttribute("headerFlag", "board");
 		

@@ -9,6 +9,6 @@ import com.spring.dto.BoaDto;
 @Service
 public interface BoardService {
 	
-	public List<BoaDto> boardAll(BoaDto boa) throws Exception;
+	public List<BoaDto> boardAll() throws Exception;
 	
 }
