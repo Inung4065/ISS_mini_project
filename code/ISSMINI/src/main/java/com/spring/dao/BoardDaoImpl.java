@@ -15,7 +15,7 @@ public class BoardDaoImpl implements BoardDao {
 	private SqlSessionTemplate sqlSession;
 	
 	@Override
-	public List<BoaDto> selectAllBoard(BoaDto boadto) {
-		return sqlSession.selectList("useDB.selectAllBoard",boadto);
+	public List<BoaDto> selectAllBoard() {
+		return sqlSession.selectList("useDB.selectAllBoard");
 	}
 }

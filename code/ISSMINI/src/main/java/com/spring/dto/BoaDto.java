@@ -1,13 +1,11 @@
 package com.spring.dto;
 
-import java.util.Date;
-
 public class BoaDto {
 	private int no;
 	private String title;
 	private String contents;
 	private String user;
-	private Date createTime;
+	private String createTime;
 	private Boolean delete;
 	public int getNo() {
 		return no;
@@ -33,10 +31,10 @@ public class BoaDto {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	public Date getCreateTime() {
+	public String getCreateTime() {
 		return createTime;
 	}
-	public void setCreateTime(Date createTime) {
+	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
 	}
 	public Boolean getDelete() {

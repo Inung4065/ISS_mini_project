@@ -6,5 +6,5 @@ import com.spring.dto.BoaDto;
 
 public interface BoardDao {
 	
-	public List<BoaDto> selectAllBoard(BoaDto baodto);
+	public List<BoaDto> selectAllBoard();
 }
