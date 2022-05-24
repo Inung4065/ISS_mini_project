@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.common.CommonUtil;
+import com.spring.common.Pagination;
 import com.spring.dto.AccDto;
 import com.spring.dto.BoaDto;
 import com.spring.service.BoardService;
@@ -37,7 +38,7 @@ public class SignInController {
 	private CommonUtil com;
 
 	@RequestMapping( value="/login.do", method=RequestMethod.POST )
-	public String SignIn(AccDto accDto, BoaDto boadto, Model model, HttpServletRequest request, HttpServletResponse response ) throws Exception {
+	public String SignIn(AccDto accDto, Model model, HttpServletRequest request, HttpServletResponse response ) throws Exception {
 
 		logger.info( "LOGIN" );
 
@@ -46,14 +47,20 @@ public class SignInController {
 
 		if ( outAccDto != null ) {
 
-			session.setAttribute( "outAccDto", outAccDto );
-			
-			List<BoaDto> list = boardService.boardAll();
+			int listCnt = boardService.getBoardListCnt(  );
+
+			Pagination pagination = new Pagination(  );
+			pagination.pageInfo( 1, 1, listCnt );
+
+			List<BoaDto> list = boardService.boardAll(pagination);
+
+			model.addAttribute("pagination",pagination);
 			model.addAttribute("boardlist",list);
-			
+
 			model.addAttribute("headerFlag", "board");
 			
 			return "i0003";
+
 		} else {
 
 			String msg = messageSource.getMessage("IME0005", null, Locale.JAPANESE);
