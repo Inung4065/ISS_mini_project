@@ -24,4 +24,9 @@ public class BoardDaoImpl implements BoardDao {
 	public int getBoardListCnt() throws Exception {
 		return sqlSession.selectOne("useDB.getBoardListCnt");
 	}
+
+	@Override
+	public void insertBoard(BoaDto dto) {
+		sqlSession.insert("useDB.insertBoa", dto);
+	}
 }

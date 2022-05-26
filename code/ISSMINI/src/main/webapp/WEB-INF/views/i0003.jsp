@@ -48,7 +48,10 @@
 						<div class="col-9">
 						</div>
 						<div class="col-3">
-							<button type="button" class="btn btn-secondary btn-sm" onclick="">作成</button>
+							<form action="create.do" method="get">
+								<input type="hidden" name="user" value="${user}">
+								<button type="submit" class="btn btn-secondary btn-sm" onclick="">作成</button>
+							</form>
 						</div>
 					</div>
 					<div class="row">
@@ -56,18 +59,18 @@
 							<ul class="pagination justify-content-center pagination-sm">
 								<c:if test="${pagination.prev}">
 									<li class="page-item">
-										<a class="page-link text-secondary" href="#" aria-label="Previous" onClick="fn_prev('${pagination.page}', '${pagination.range}', '${pagination.rangeSize}')">
+										<a class="page-link text-secondary" href="#" aria-label="Previous" onClick="fn_prev('${pagination.page}', '${pagination.range}', '${pagination.rangeSize}', '${user}')">
 											<span aria-hidden="true">&laquo;</span>
 											<span class="sr-only">Previous</span>
 										</a>
 									</li>
 								</c:if>
 								<c:forEach begin="${pagination.startPage}" end="${pagination.endPage + 1}" var="idx">
-									<li class="page-item"><a class="page-link text-secondary" href="#" onClick="fn_pagination('${idx}', '${pagination.range}', '${pagination.rangeSize}')">${idx}</a></li>
+									<li class="page-item"><a class="page-link text-secondary" href="#" onClick="fn_pagination('${idx}', '${pagination.range}', '${pagination.rangeSize}', '${user}')">${idx}</a></li>
 								</c:forEach>
 								<c:if test="${pagination.next}">
 									<li class="page-item <c:out value="${pagination.page == idx ? 'active' : ''}"/>">
-										<a class="page-link text-secondary" href="#" aria-label="Next" onClick="fn_next('${pagination.range}', '${pagination.range}', '${pagination.rangeSize}')" >
+										<a class="page-link text-secondary" href="#" aria-label="Next" onClick="fn_next('${pagination.range}', '${pagination.range}', '${pagination.rangeSize}', '${user}')" >
 											<span aria-hidden="true">&raquo;</span>
 											<span class="sr-only">Next</span>
 										</a>

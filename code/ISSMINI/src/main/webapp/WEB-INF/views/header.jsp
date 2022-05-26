@@ -22,7 +22,8 @@
             </c:when>
             <c:otherwise>
               <div style="margin: 0 35px;">
-                <form action="board" method="post" id="board">
+                <form action="board" method="get" id="board">
+                  <input type="hidden" name="user" value="${user}">
                   <p style="border: 1px solid white; cursor: pointer;" onclick="document.getElementById('board').submit();">board</p>
                 </form>
               </div>

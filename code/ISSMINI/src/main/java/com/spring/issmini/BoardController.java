@@ -22,8 +22,8 @@ public class BoardController {
 	@RequestMapping( value="/board.do", method=RequestMethod.GET )
 	public String BoardPage( Model model,
 			@RequestParam( required = false, defaultValue = "1" ) int page,
-			@RequestParam( required = false, defaultValue = "1" ) int range			
-			) throws Exception {
+			@RequestParam( required = false, defaultValue = "1" ) int range,
+			@RequestParam() String user) throws Exception {
 
 		int listCnt = boardService.getBoardListCnt(  );
 
@@ -35,6 +35,7 @@ public class BoardController {
 		model.addAttribute( "pagination", pagination );
 		model.addAttribute( "boardlist", list );
 		model.addAttribute( "headerFlag", "board" );
+		model.addAttribute("user", user);
 		
 		return "i0003";
 	}

@@ -6,7 +6,7 @@ public class BoaDto {
 	private String contents;
 	private String user;
 	private String createTime;
-	private Boolean delete;
+	private Boolean deleteFlag;
 	public int getNo() {
 		return no;
 	}
@@ -37,11 +37,11 @@ public class BoaDto {
 	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
 	}
-	public Boolean getDelete() {
-		return delete;
+	public Boolean getDeleteFlag() {
+		return deleteFlag;
 	}
-	public void setDelete(Boolean delete) {
-		this.delete = delete;
+	public void setDeleteFlag(Boolean deleteFlag) {
+		this.deleteFlag = deleteFlag;
 	}
 	
 	

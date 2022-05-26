@@ -14,6 +14,12 @@
 	
 	<!-- BOA_TBL -->
 	<select id="selectAllBoard" resultType="BoaDto">
-		SELECT * FROM BOA_TBL order by no DESC;
+		SELECT * FROM BOA_TBL WHERE deleteFlag = FALSE ORDER BY no DESC LIMIT #{startList}, #{listSize}
 	</select>
+	<select id="getBoardListCnt" resultType="int">
+		SELECT count(*) as listCnt FROM BOA_TBL
+	</select>
+	<insert id="insertBoa" parameterType="BoaDto">
+		INSERT INTO BOA_TBL VALUES(#{no}, #{title}, #{contents}, #{user}, #{createTime}, #{delete})
+	</insert>
 </mapper>
