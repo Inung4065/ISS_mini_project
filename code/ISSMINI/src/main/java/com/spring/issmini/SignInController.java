@@ -56,8 +56,8 @@ public class SignInController {
 
 			model.addAttribute("pagination",pagination);
 			model.addAttribute("boardlist",list);
-
 			model.addAttribute("headerFlag", "board");
+			model.addAttribute("user", accDto.getAccountId());
 			
 			return "i0003";
 

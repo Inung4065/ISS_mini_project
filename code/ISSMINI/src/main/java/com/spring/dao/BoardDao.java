@@ -10,4 +10,6 @@ public interface BoardDao {
 	public List<BoaDto> selectAllBoard(Pagination pagination);
 
 	public int getBoardListCnt() throws Exception;
+	
+	public void insertBoard(BoaDto dto);
 }
