@@ -1,7 +1,5 @@
 package com.spring.issmini;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -41,6 +39,7 @@ public class CreateController {
 	public String ViewPage(Model model,
 			@RequestParam() String user) {
 		model.addAttribute("user", user);
+		model.addAttribute("headerFlag", "board");
 		
 		return "i0005";
 	}
@@ -68,7 +67,7 @@ public class CreateController {
 			pagination.pageInfo(1, 1, listCnt);
 			
 			List<BoaDto> list = boardService.boardAll(pagination);
-			model.addAttribute( "pagination", pagination );
+			model.addAttribute("pagination", pagination );
 			model.addAttribute("boardlist",list);
 			model.addAttribute("headerFlag", "board");
 			model.addAttribute("user", info.getUser());

@@ -36,11 +36,11 @@ public class CreateServiceImpl implements CreateService {
 		
 		if (info.getTextTitle().length() > 30) {
 			msg = msg + "«¿«¤«È«ë ";
-			msg2 = msg2 + "20 ";
+			msg2 = msg2 + "30 ";
 		}
 		if (info.getTextContents().length() > 1000) {
 			msg = msg + "ÜâÙþ ";
-			msg = msg + "1000 ";
+			msg2 = msg2 + "1000 ";
 		}
 		if (msg != "") {
 			msg = messageSource.getMessage("IME0006", new String[]{msg, msg2}, Locale.JAPANESE);

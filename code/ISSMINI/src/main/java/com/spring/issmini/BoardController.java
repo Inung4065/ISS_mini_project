@@ -35,7 +35,7 @@ public class BoardController {
 		model.addAttribute( "pagination", pagination );
 		model.addAttribute( "boardlist", list );
 		model.addAttribute( "headerFlag", "board" );
-		model.addAttribute("user", user);
+		model.addAttribute( "user", user);
 		
 		return "i0003";
 	}
