@@ -20,6 +20,6 @@
 		SELECT count(*) as listCnt FROM BOA_TBL
 	</select>
 	<insert id="insertBoa" parameterType="BoaDto">
-		INSERT INTO BOA_TBL VALUES(#{no}, #{title}, #{contents}, #{user}, #{createTime}, #{delete})
+		INSERT INTO BOA_TBL VALUES(#{no}, #{title}, #{contents}, #{user}, #{createTime}, #{deleteFlag})
 	</insert>
 </mapper>
