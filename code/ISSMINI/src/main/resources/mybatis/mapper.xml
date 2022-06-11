@@ -22,4 +22,9 @@
 	<insert id="insertBoa" parameterType="BoaDto">
 		INSERT INTO BOA_TBL VALUES(#{no}, #{title}, #{contents}, #{user}, #{createTime}, #{deleteFlag})
 	</insert>
+	<update id="empUpdate" parameterType="BoaDto">
+	    UPDATE BOA_TBL
+	    SET title = #{title}, contents = #{contents}, createTime = #{createTime}, deleteFlag = #{deleteFlag}
+	    WHERE no = #{no}
+	</update>
 </mapper>
