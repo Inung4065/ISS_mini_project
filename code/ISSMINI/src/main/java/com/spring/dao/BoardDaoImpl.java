@@ -29,4 +29,11 @@ public class BoardDaoImpl implements BoardDao {
 	public void insertBoard(BoaDto dto) {
 		sqlSession.insert("useDB.insertBoa", dto);
 	}
+
+	@Override
+	public void updateBoard(BoaDto dto) {		
+		sqlSession.update("useDB.updateBoa", dto);
+	}
+	
+	
 }

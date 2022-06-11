@@ -12,4 +12,6 @@ public interface BoardDao {
 	public int getBoardListCnt() throws Exception;
 	
 	public void insertBoard(BoaDto dto);
+	
+	public void updateBoard(BoaDto dto);
 }
