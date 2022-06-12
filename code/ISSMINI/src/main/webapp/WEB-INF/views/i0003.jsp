@@ -36,7 +36,7 @@
 								<c:forEach items="${boardlist}" var="list">
 									<tr>
 										<th scope="row">${list.no}</th>
-										<td>${list.title}</td>
+										<td><a href="i0004?no=${list.no}&user=${user}">${list.title}</a></td>
 										<td>${list.user}</td>
 										<td>${list.createTime}</td>
 									</tr>
