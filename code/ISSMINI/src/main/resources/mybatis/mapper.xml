@@ -16,15 +16,23 @@
 	<select id="selectAllBoard" resultType="BoaDto">
 		SELECT * FROM BOA_TBL WHERE deleteFlag = FALSE ORDER BY no DESC LIMIT #{startList}, #{listSize}
 	</select>
+	<select id="selectBoard" resultType="BoaDto">
+		SELECT * FROM BOA_TBL WHERE no = #{no}
+	</select>
 	<select id="getBoardListCnt" resultType="int">
 		SELECT count(*) as listCnt FROM BOA_TBL
 	</select>
 	<insert id="insertBoa" parameterType="BoaDto">
 		INSERT INTO BOA_TBL VALUES(#{no}, #{title}, #{contents}, #{user}, #{createTime}, #{deleteFlag})
 	</insert>
-	<update id="empUpdate" parameterType="BoaDto">
-	    UPDATE BOA_TBL
-	    SET title = #{title}, contents = #{contents}, createTime = #{createTime}, deleteFlag = #{deleteFlag}
-	    WHERE no = #{no}
+	<update id="updateBoa" parameterType="BoaDto">
+        UPDATE BOA_TBL
+        SET title = #{title}, contents = #{contents}, createTime = #{createTime}, deleteFlag = #{deleteFlag}
+        WHERE no = #{no}
+	</update>
+	<update id="deleteBoa" parameterType="BoaDto">
+        UPDATE BOA_TBL
+        SET createTime = #{createTime}, deleteFlag = #{deleteFlag}
+        WHERE no = #{no}
 	</update>
 </mapper>

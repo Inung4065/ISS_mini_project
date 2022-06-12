@@ -1,10 +1,18 @@
 package com.spring.info;
 
 public class BoardInfo {
+
+	private int textNo;
 	private String user;
 	private String textTitle;
 	private String textContents;
 	
+	public int getTextNo() {
+		return textNo;
+	}
+	public void setTextNo(int textNo) {
+		this.textNo = textNo;
+	}
 	public String getUser() {
 		return user;
 	}

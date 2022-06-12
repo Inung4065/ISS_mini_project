@@ -21,6 +21,11 @@ public class BoardDaoImpl implements BoardDao {
 	}
 
 	@Override
+	public BoaDto selectBoard( int no ) {
+		return sqlSession.selectOne("useDB.selectBoard", no);
+	}
+
+	@Override
 	public int getBoardListCnt() throws Exception {
 		return sqlSession.selectOne("useDB.getBoardListCnt");
 	}
@@ -34,6 +39,10 @@ public class BoardDaoImpl implements BoardDao {
 	public void updateBoard(BoaDto dto) {		
 		sqlSession.update("useDB.updateBoa", dto);
 	}
-	
-	
+
+	@Override
+	public void deleteBoard(BoaDto dto) {
+		sqlSession.update("useDB.deleteBoa", dto);
+		
+	}
 }
