@@ -22,6 +22,7 @@ public class CreateServiceImpl implements CreateService {
 	@Autowired
 	private BoardDao dao;
 	
+	//ìýÕô«Á«§«Ã«¯
 	@Override
 	public String inputCheck(BoardInfo info) {
 		String msg = "";
@@ -49,7 +50,8 @@ public class CreateServiceImpl implements CreateService {
 		
 		return msg;
 	}
-
+	
+	//íÂà÷Ñ¦Òö
 	@Override
 	public void boardAdd(BoardInfo info) throws Exception {
 		int no = dao.getBoardListCnt() + 1;
@@ -57,6 +59,7 @@ public class CreateServiceImpl implements CreateService {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yy/MM/dd HH:mm:ss");
 		
 		BoaDto dto = new BoaDto();
+		
 		dto.setNo(no);
 		dto.setTitle(info.getTextTitle());
 		dto.setContents(info.getTextContents());

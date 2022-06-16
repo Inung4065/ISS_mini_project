@@ -104,7 +104,8 @@ public class Pagination {
 
 		return startList;
 	}
-
+	
+	//Boardページのpaging
 	public void pageInfo(int page, int range, int listCnt) {
 
 		this.page = page;

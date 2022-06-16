@@ -34,7 +34,7 @@ public class CreateController {
 	@Autowired
 	private CommonUtil com;
 	
-	
+	//作成初期画面
 	@RequestMapping(value="/create.do", method = RequestMethod.GET)
 	public String ViewPage(Model model,
 			@RequestParam() String user) {
@@ -44,18 +44,22 @@ public class CreateController {
 		return "i0005";
 	}
 	
+	//作成
 	@RequestMapping(value="/create.do", method = RequestMethod.POST)
-	public String SingUp(BoardInfo info, Model model, HttpServletResponse response) throws Exception {
+	public String Create(BoardInfo info, Model model, HttpServletResponse response) throws Exception {
 		String msg = createService.inputCheck(info);
+		//エラーが発生した場合
 		if (msg != "") {
 			model.addAttribute("user", info.getUser());
 			model.addAttribute("textTitle", info.getTextTitle());
 			model.addAttribute("textContents", info.getTextContents());
-			
+			//エラーメッセージ出力
 			com.alert(response, msg);
             
 			return "i0005";
-		} else {
+		}
+		//エラーが発生してない場合
+		else {
 			createService.boardAdd(info);
 			
 			msg = messageSource.getMessage("IMI0004", null, Locale.JAPANESE);

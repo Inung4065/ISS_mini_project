@@ -11,20 +11,20 @@ public class SignInDaoImpl implements SignInDao {
 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
-
+	
+	//«í«°«¤«ó
 	@Override
 	public AccDto signIn( AccDto accDto ) {
 
 		AccDto outAccDto = null;
-
+		
 		try {
-
+			//«í«°«¤«óuserö¢Ôð
 			outAccDto = sqlSession.selectOne( NAMESPACE + "selectAccForSignIn", accDto );
 		} catch ( Exception e ) {
-
 			e.printStackTrace(  );
 		}
-
+		
 		return outAccDto;
 	}
 

@@ -28,6 +28,7 @@ public class DetailController {
 	@Autowired
 	private DetailService detailService;
 	
+	//詳細初期画面
 	@RequestMapping(value="i0004", method = RequestMethod.GET)
 	public String ViewPage(Model model,
 			@RequestParam() int no,
@@ -42,8 +43,9 @@ public class DetailController {
 		return "i0004";
 	}
 	
+	//以前画面に戻る
 	@RequestMapping(value="/back", method = RequestMethod.POST)
-	public String back(BoardInfo info,
+	public String Back(BoardInfo info,
 			Model model, HttpServletResponse response ) throws Exception {
 
 		int listCnt = boardService.getBoardListCnt(  );
@@ -61,8 +63,9 @@ public class DetailController {
 		return "i0003";
 	}
 	
+	//更新
 	@RequestMapping(value="/update", method = RequestMethod.POST)
-	public String update(BoardInfo info,
+	public String Update(BoardInfo info,
 			Model model, HttpServletResponse response ) throws Exception {
 
 		detailService.boardUpdate(info);
@@ -83,8 +86,9 @@ public class DetailController {
 		
 	}
 	
+	//削除
 	@RequestMapping(value="/delete", method = RequestMethod.POST)
-	public String delete(BoardInfo info,
+	public String Delete(BoardInfo info,
 			Model model, HttpServletResponse response ) throws Exception {
 
 		detailService.boardDelete(info);

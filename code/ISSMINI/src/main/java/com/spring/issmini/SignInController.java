@@ -36,7 +36,8 @@ public class SignInController {
 	private MessageSource messageSource;
 	@Autowired
 	private CommonUtil com;
-
+	
+	//ログイン初期画面
 	@RequestMapping( value="/login.do", method=RequestMethod.POST )
 	public String SignIn(AccDto accDto, Model model, HttpServletRequest request, HttpServletResponse response ) throws Exception {
 
@@ -44,7 +45,8 @@ public class SignInController {
 
 		HttpSession session = request.getSession(  );
 		AccDto outAccDto = signInService.signIn( accDto );
-
+		
+		//すべての項目が入力されてる場合
 		if ( outAccDto != null ) {
 
 			int listCnt = boardService.getBoardListCnt(  );
@@ -61,9 +63,12 @@ public class SignInController {
 			
 			return "i0003";
 
-		} else {
+		}
+		//エラーが発生した場合
+		else {
 
 			String msg = messageSource.getMessage("IME0005", null, Locale.JAPANESE);
+			//メッセージ出力
 			com.alert(response, msg);
 
 			String requestId = accDto.getAccountId(  );

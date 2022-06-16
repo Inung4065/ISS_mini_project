@@ -1,4 +1,15 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/spring/common/Pagination.java=UTF-8
+encoding//src/main/java/com/spring/dao/BoardDaoImpl.java=UTF-8
+encoding//src/main/java/com/spring/dao/SignUpDaoImpl.java=UTF-8
+encoding//src/main/java/com/spring/issmini/BoardController.java=UTF-8
+encoding//src/main/java/com/spring/issmini/CreateController.java=UTF-8
+encoding//src/main/java/com/spring/issmini/DetailController.java=UTF-8
+encoding//src/main/java/com/spring/issmini/HomeController.java=UTF-8
+encoding//src/main/java/com/spring/issmini/SignInController.java=UTF-8
+encoding//src/main/java/com/spring/issmini/SignUpController.java=UTF-8
+encoding//src/main/java/com/spring/service/BoardServiceImpl.java=UTF-8
+encoding//src/main/java/com/spring/service/DetailServiceImpl.java=UTF-8
 encoding//src/main/resources/messages/message.properties=UTF-16
 encoding//src/main/resources/messages/message_ja.properties=UTF-16
 encoding//src/main/webapp/WEB-INF/views/i0002.jsp=UTF-8
