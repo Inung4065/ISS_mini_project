@@ -6,6 +6,7 @@ public class BoardInfo {
 	private String user;
 	private String textTitle;
 	private String textContents;
+	private String loginUser;
 	
 	public int getTextNo() {
 		return textNo;
@@ -31,4 +32,10 @@ public class BoardInfo {
 	public void setTextContents(String textContents) {
 		this.textContents = textContents;
 	}
+    public String getLoginUser() {
+        return loginUser;
+    }
+    public void setLoginUser(String loginUser) {
+        this.loginUser = loginUser;
+    }
 }

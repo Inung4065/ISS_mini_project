@@ -1,27 +1,27 @@
 $( function(  ) {
-	$( "#btnSubmit" ).click( function(  ) {
+    $( "#btnSubmit" ).click( function(  ) {
 
-		var accountId=$( "#accountIdForCheck" ).val(  );
-		var accountPassword=$( "#accountPasswordForCheck" ).val(  );
+        var accountId=$( "#accountIdForCheck" ).val(  );
+        var accountPassword=$( "#accountPasswordForCheck" ).val(  );
 
-		if ( accountId == "" ) {
+        if ( accountId == "" ) {
 
-			alert( "아이디를입력하세요" );
-			$( "#accountIdForCheck" ).focus(  );
-			$( 'form' ).bind( 'submit', false );
-			
-			return;
-		}
+            alert( "아이디를입력하세요" );
+            $( "#accountIdForCheck" ).focus(  );
+            $( 'form' ).bind( 'submit', false );
 
-		if ( accountPassword == "" ) {
+            return;
+        }
 
-			alert( "비밀번호를입력하세요" );
-			$( "#accountPasswordForCheck" ).focus(  );
-			$( 'form' ).bind( 'submit', false );
-		
-			return;
-		}
+        if ( accountPassword == "" ) {
 
-		$( 'form' ).unbind(  );
-	} );
+            alert( "비밀번호를입력하세요" );
+            $( "#accountPasswordForCheck" ).focus(  );
+            $( 'form' ).bind( 'submit', false );
+
+            return;
+        }
+
+        $( 'form' ).unbind(  );
+    } );
 } );

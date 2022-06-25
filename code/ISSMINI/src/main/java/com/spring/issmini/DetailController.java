@@ -56,7 +56,7 @@ public class DetailController {
 		model.addAttribute("pagination", pagination);
 		model.addAttribute("boardlist", list);
 		model.addAttribute("headerFlag", "board");
-		model.addAttribute("user", info.getUser());
+		model.addAttribute("user", info.getLoginUser());
 
 		return "i0003";
 	}
@@ -77,7 +77,7 @@ public class DetailController {
 		model.addAttribute("pagination", pagination);
 		model.addAttribute("boardlist", list);
 		model.addAttribute("headerFlag", "board");
-		model.addAttribute("user", info.getUser());
+		model.addAttribute("user", info.getLoginUser());
 
 		return "i0003";
 		
@@ -99,7 +99,7 @@ public class DetailController {
 		model.addAttribute("pagination", pagination);
 		model.addAttribute("boardlist", list);
 		model.addAttribute("headerFlag", "board");
-		model.addAttribute("user", info.getUser());
+		model.addAttribute("user", info.getLoginUser());
 
 		return "i0003";
 	}
