@@ -13,9 +13,6 @@ import com.spring.dto.AccDto;
 import com.spring.info.SignUpInfo;
 import com.spring.service.SignUpService;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class SignUpController {
 
@@ -26,23 +23,28 @@ public class SignUpController {
 	@Autowired
 	private CommonUtil com;
 	
-	
+	//アカウント作成の初期画面
 	@RequestMapping(value="i0002", method = RequestMethod.GET)
 	public String ViewPage(Model model) {
 		return "i0002";
 	}
 	
+	//アカウント作成
 	@RequestMapping(value="i0002", method = RequestMethod.POST)
 	public String SingUp(SignUpInfo info, Model model, HttpServletResponse response) throws Exception {
 		String msg = signUpService.inputCheck(info);
+		//エラーが発生した場合
 		if (msg != "") {
 			model.addAttribute("id", info.getId());
 			model.addAttribute("name", info.getName());
 			
+			//メッセージ出力
 			com.alert(response, msg);
             
 			return "i0002";
-		} else {
+		}
+		//エラーが発生してない場合
+		else {
 			AccDto dto = new AccDto();
 			dto.setAccountId(info.getId());
 			dto.setAccountPassword(info.getPassword());

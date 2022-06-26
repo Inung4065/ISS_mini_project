@@ -18,7 +18,8 @@ public class BoardController {
 
 	@Autowired
 	private BoardService boardService;
-
+	
+	//メイン初期画面
 	@RequestMapping( value="/board.do", method=RequestMethod.GET )
 	public String BoardPage( Model model,
 			@RequestParam( required = false, defaultValue = "1" ) int page,

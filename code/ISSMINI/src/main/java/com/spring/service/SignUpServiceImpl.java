@@ -19,11 +19,13 @@ public class SignUpServiceImpl implements SignUpService {
 	@Autowired
 	private SignUpDao dao;
 	
+	//Insert
 	@Override
 	public void accountAdd(AccDto dto) throws Exception {
 		dao.insertAcc(dto);
 	}
 	
+	//ìýÕô«Á«§«Ã«¯
 	@Override
 	public String inputCheck(SignUpInfo info) {
 		String msg = "";

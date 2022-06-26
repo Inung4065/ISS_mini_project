@@ -14,12 +14,14 @@ public class BoardServiceImpl implements BoardService {
 
 	@Autowired
 	private BoardDao dao;
-
+	
+	//件数を取得
 	@Override
 	public int getBoardListCnt() throws Exception {
 		return dao.getBoardListCnt();
 	}
-
+	
+	//すべてのSelect
 	@Override
 	public List<BoaDto> boardAll(Pagination pagination) throws Exception {
 		return dao.selectAllBoard(pagination);
